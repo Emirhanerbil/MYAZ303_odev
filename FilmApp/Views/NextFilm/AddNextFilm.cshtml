@@ -1,0 +1,25 @@
+﻿@model FilmFeatures
+@using (Html.BeginForm("AddNextFilm", "NextFilm", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Film Ekle</h4>
+                <br />
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>Film Adı</label>
+                        <input type="text" class="form-control" name="NextFilmName">
+                        <label class="mt-5">Film Yorumu</label>
+                        <input type="text" class="form-control" name="FilmComment">
+                         <label class="mt-5">Kategori</label>
+                        <input asp-for="Category.CategoryName" class="form-control" />
+                         <label class="mt-5">Yönetmen</label>
+                        <input asp-for="Director.DirectorName" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn btn-outline-info  mt-5">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
